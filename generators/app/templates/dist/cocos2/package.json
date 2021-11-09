@@ -1,0 +1,15 @@
+{
+  "name": "cocos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "taobaodev build --sim --port 80",
+    "debug": "taobaodev build-preview --debug"
+  },
+  "author": "XiaoAi Co.Ltd.",
+  "license": "ISC"
+}
