@@ -1,0 +1,1 @@
+node ./cocos2.js

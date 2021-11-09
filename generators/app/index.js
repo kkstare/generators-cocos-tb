@@ -49,10 +49,10 @@ module.exports = class extends Generator {
       this.templatePath('src'),
       this.destinationPath(`${this.props.appName}/src`)
     );
-    this.fs.copy(
-        this.templatePath('tools'),
-        this.destinationPath(`${this.props.appName}/tools`)
-      );
+    // this.fs.copy(
+    //     this.templatePath('tools'),
+    //     this.destinationPath(`${this.props.appName}/tools`)
+    //   );
     this.fs.copy(
       this.templatePath('tsconfig.json'),
       this.destinationPath(`${this.props.appName}/tsconfig.json`)
@@ -69,7 +69,14 @@ module.exports = class extends Generator {
       this.templatePath('cocos3.js'),
       this.destinationPath(`${this.props.appName}/cocos3.js`)
     );
-
+    this.fs.copy(
+      this.templatePath('build2.bat'),
+      this.destinationPath(`${this.props.appName}/build2.bat`)
+    );
+    this.fs.copy(
+      this.templatePath('build3.bat'),
+      this.destinationPath(`${this.props.appName}/build3.bat`)
+    );
     this.fs.copy(
         this.templatePath('README.md'),
         this.destinationPath(`${this.props.appName}/README.md`)

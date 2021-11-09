@@ -1,1 +1,0 @@
-node ../cocos3.js
