@@ -92,6 +92,7 @@
   "include": [
     "./src/libs",
     "./src/scripts",
-    "./cocos2.ts"
+    "./cocos2.ts",
+    "./cocos3.ts"
     ]
 }

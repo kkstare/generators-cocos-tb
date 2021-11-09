@@ -65,6 +65,10 @@ module.exports = class extends Generator {
         this.templatePath('cocos2.js'),
         this.destinationPath(`${this.props.appName}/cocos2.js`)
     );
+    this.fs.copy(
+      this.templatePath('cocos3.js'),
+      this.destinationPath(`${this.props.appName}/cocos3.js`)
+    );
 
     this.fs.copy(
         this.templatePath('README.md'),
