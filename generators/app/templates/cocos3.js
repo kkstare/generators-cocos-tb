@@ -41,6 +41,14 @@ async function main() {
     contentSettingjs = 'var window = $global;\nwindow._CCSettings = ' + contentSettingjs;
     fs_extra_1.default.writeFileSync(settingPath, contentSettingjs, 'utf-8');
     fs_extra_1.default.rename(settingPath, settingPath.replace(settingFileName, 'setting.js'));
+    let files = fs_extra_1.default.readdirSync(path_1.default.join(DIST_PATH, 'cocos-js'));
+    for (let index = 0; index < files.length; index++) {
+        const element = files[index];
+        let cocosJsPath = path_1.default.join(DIST_PATH, 'cocos-js/' + element);
+        let cocosJs = fs_extra_1.default.readFileSync(cocosJsPath, 'utf-8');
+        cocosJs = `var globalThis = {"Uint8Array": Uint8Array, "Uint16Array": Uint16Array, "Uint32Array": Uint32Array, "Int8Array": Int8Array,  "Int16Array": Int16Array, "Int32Array": Int32Array, "Float32Array": Float32Array, "Float64Array": Float64Array};\n` + cocosJs;
+        fs_extra_1.default.writeFileSync(cocosJsPath, cocosJs, 'utf-8');
+    }
     // let files = fs.readdirSync(path.join(DIST_PATH, 'cocos-js'));
     // let cocosJsPath = path.join(DIST_PATH, 'cocos-js/' + files[0]);
     // let cocosJs = fs.readFileSync(cocosJsPath, 'utf-8');

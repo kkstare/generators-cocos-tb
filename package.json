@@ -1,6 +1,6 @@
 {
   "name": "generator-cocos-tb",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "creator adapts taobao",
   "main": "src/cocos2.js",
   "devDependencies": {
